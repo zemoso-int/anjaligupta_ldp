@@ -21,15 +21,6 @@ h2 {
   text-align: center;
 }
 
-/* #tableSection {
-  background-color: rgb(201, 177, 225);
-}
-
-#menuSection {
-  background-color: rgb(211, 188, 235);
-
-} */
-
 #menuList li{
   list-style-type: none;
   border: 2px solid rgba(176, 174, 221, 0.4);
@@ -59,15 +50,6 @@ a {
 }
 
 .is-hidden { display: none; }
-
-/* ul li {
-  border: 2px solid rgb(133, 30, 30);
-  text-decoration: none;
-  padding: 5px;
-  margin: 25px 250px; 
-} */
-
-
 
 .modal {
   display: none;

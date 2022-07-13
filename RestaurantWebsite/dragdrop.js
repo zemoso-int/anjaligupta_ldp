@@ -14,14 +14,9 @@ function onDrop(event) {
     event.preventDefault();
     let dish_id = event.dataTransfer.getData('text');
     let ele = document.getElementById(dish_id);  //dish id
-   // console.log("ondrop "+dish_id);
     let dish = ele.getElementsByTagName("a")[0].text;
     let price = ele.getElementsByTagName("p")[0].innerHTML.substring(3);
-    let table_id = event.target.id;
-  // console.log("onDrop table_id "+table_id);
-
-    //check if dish exist already. if it exists, increase qty else add new table entry
-    
+    let table_id = event.target.id;    
     updateGloalOrderDetails(table_id,dish,price);
     addDishToModal(table_id);
     updateSummary(table_id);
@@ -130,8 +125,6 @@ function addDishToModal(table_id) {
 function updateQty(new_qty,id_,table)  {
     var table_id = table.id;
     console.log("in updateQty "+new_qty+" "+id_+" "+table_id);
-    //let newcost = price_*v;
-
     var temp;
 
     if(table_id == 't1')     {
@@ -168,7 +161,6 @@ function displayModal(t_id) {
 
 function closeModal(m_id) {
     modal = document.getElementById(m_id);
-    //console.log("close modal "+modal);
     modal.style.display="none";
 }
 
