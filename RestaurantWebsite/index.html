@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2>ZeMoSo Resturant</h2>
+        <link rel="stylesheet" href="mystyle.css">
+        <script type="text/javascript" src="searchitems.js"></script>
+        <script type="text/javascript" src="dragdrop.js"></script>
+    </head>
+    <body>
+    <div class="columns">
+        <div class="column" id="tableSection">
+          <h3> Tables </h3>
+          <input type="search" id="tableQuery" name="q2" placeholder="Search..." onkeyup="searchTables()">
+
+          <ul id="tableList">
+            <li ondragover="onDragOver(event)" ondrop="onDrop(event)" id="t1">
+              <a  onclick="displayModal('t1')" class="individual_table" >TABLE 1</a>
+              <p>Rs. 0 </p>
+              <p> Total Items: 0</p>
+
+              <div class="modal" id="m_id1">
+                  <div class="modal-content" id="m_id2">
+                    <span class="close-btn" onclick="closeModal('m_id1')">&times;</span>
+                    <h3>Table 1| Order Details</h3>
+                    <table id="t_id1">
+                      <thead>
+                        <tr>
+                          <th>Item</th>
+                          <th>Price</th>
+                          <th>Quantity</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        
+                      </tbody>
+                    </table>
+                    <p class="order_total">Order Total: </p>
+                    <button type="button" class="generateBill" onclick="generateBill('t1')"> Generate Bill</button>
+                  </div>
+              </div>
+            </li>
+
+            <li ondragover="onDragOver(event)" ondrop="onDrop(event)" id="t2">
+              <a onclick="displayModal('t2')" class="individual_table">TABLE 2</a>
+              <p>Rs. 0 </p>
+              <p> Total Items: 0</p>
+              
+              <div class="modal" id="m_id3">
+                <div class="modal-content" id="m_id4">
+                  <span class="close-btn" onclick="closeModal('m_id3')">&times;</span>
+                  <h3>Table 1| Order Details</h3>
+                  <table id="t_id2">
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                  </table>
+                  <p class="order_total">Order Total: </p>
+                  <button type="button" class="generateBill" onclick="generateBill('t2')"> Generate Bill</button>
+                </div>
+            </div>
+            </li>
+            <li ondragover="onDragOver(event)" ondrop="onDrop(event)" id="t3">
+              <a onclick="displayModal('t3')" class="individual_table">TABLE 3</a>
+              <p>Rs. 0 </p>
+              <p> Total Items: 0</p>
+              <div class="modal" id="m_id5">
+                <div class="modal-content" id="m_id6">
+                  <span class="close-btn" onclick="closeModal('m_id5')">&times;</span>
+                  <h3>Table 1| Order Details</h3>
+                  <table id="t_id3">
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      
+                    </tbody>
+                  </table>
+                  <p class="order_total">Order Total: </p>
+                  <button type="button" class="generate_bill" onclick="generateBill('t3')"> Generate Bill</button>
+                </div>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="column" id="menuSection">
+          <h3>Menu</h3>
+          
+            <input type="search" id="menuQuery" name="q1" placeholder="Search by dish name..." onkeyup="searchMenuItems()">
+            <input type="search" id="categoryQuery" name="q2" placeholder="Search by category..." onkeyup="searchCategoryItems()">
+          <ul id="menuList">
+
+            <li draggable="true" ondragstart="onDragStart(event)" id="dish1" class="SNACKS c1">
+                <a href="#" class="menu_item">IDLI</a>
+                <p class="price" id="rs250">Rs. 50</p>
+            </li>
+
+            <li draggable="true" ondragstart="onDragStart(event)" id="dish2" class="SNACKS c1">
+                <a href="#" class="menu_item">PIZZA</a>
+                <p class="price">Rs. 250</p>
+            </li>
+            <li draggable="true" ondragstart="onDragStart(event)" id="dish3" class="DRINKS c1">
+                <a href="#" class="menu_item">MOJITO</a>
+                <p class="price">Rs. 70</p>
+            </li>
+            <li draggable="true" ondragstart="onDragStart(event)" id="dish4" class="MAIN_COURSE c1">
+                <a href="#" class="menu_item">DOSA</a>
+                <p class="price">Rs. 100</p>
+            </li>
+            <li draggable="true" ondragstart="onDragStart(event)" id="dish5" class="MAIN_COURSE c1">
+              <a href="#" class="menu_item">SHAHI PANEER</a>
+              <p class="price">Rs. 150</p>
+            </li>
+          </ul>
+        </div>
+     </div>
+    </body>
+     
+</html>
