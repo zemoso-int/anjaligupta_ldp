@@ -11,7 +11,6 @@ let p = new Promise( (resolve,reject) => {
         } else {
             var fileData = JSON.parse(rawFileData);
             resolve(fileData);
-            //return fileData; => return doesnt work. 
         }
     });
     
